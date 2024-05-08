@@ -27,6 +27,27 @@ const connectDB = async () =>{
 }
 connectDB();
 
+// app.post('/addstud',async(req,res)=>{
+//     const studentname=req.body.StudentName;
+//     const rollno=req.body.Rollno;
+//     const marks=req.body.Marks;
+
+//     console.log(`details : ${req.body.Rollno}`)
+//     try{
+//         const newstud=await new stumodel({StudentName:studentname,
+//             Rollno:rollno,
+//             Marks:marks
+//         });
+//         await newstud.save();
+//         const all=await stumodel.find();
+//         return res.json(all)
+//     }
+//     catch(err){
+//         console.log('err in adding stud data',err)
+//     }
+// })
+
+
 app.get('/',(req,res)=>{
     res.send('<h1>Hello World!</h1>')
 })
